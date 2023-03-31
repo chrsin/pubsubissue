@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  pubsub_emulator:
+    image: gcr.io/google.com/cloudsdktool/cloud-sdk:414.0.0-emulators
+    ports:
+      - "6017:6017"
+    command: gcloud beta emulators pubsub start --project=emobility --host-port=0.0.0.0:6017
